@@ -28,8 +28,11 @@ async def on_message(ctx):
     author_id = ctx.author.id
     guild_id = ctx.guild.id
 
-    # Thot Bot
+    # Thot Bot v2
     if 'thot' in ctx.content:
+        if author_id == '924400948707745802':
+            print('Dont reply to self')
         await ctx.reply('thot')
+        
 
 bot.run(TOKEN)
