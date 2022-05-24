@@ -32,7 +32,7 @@ async def on_message(ctx):
 
         # Thot Bot v2
         if 'thot' in ctx.content:
-            await ctx.reply(file=discord.file('Thot.jpg'))
+            await ctx.reply(file='Thot.jpg')
         
         
 
