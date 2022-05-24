@@ -1,5 +1,4 @@
 import os
-from smtplib import _Reply
 from dotenv import load_dotenv
 import pymongo
 from pymongo import MongoClient
