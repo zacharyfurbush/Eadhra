@@ -31,7 +31,7 @@ async def on_message(ctx):
 
         # Thot Bot v2
         if 'thot' in ctx.content:
-            print('Dont reply to self')
+            await ctx.reply('Thot')
         
         
 
