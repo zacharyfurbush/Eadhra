@@ -31,6 +31,6 @@ async def on_message(ctx):
 
     # Thot Bot
     if 'thot' in ctx.content:
-        await discord.message.reply('thot')
+        ctx.send('thot')
 
 bot.run(TOKEN)
