@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 import pymongo
-from pymongo import mongo_client
+from pymongo import MongoClient
 import discord
 from discord.ext import commands
 
@@ -12,7 +12,7 @@ TESTGUILD = os.getenv('TESTGUILD')
 MONGOCONNECT = os.getenv('MONGOCONNECT')
 
 # MongoDB Connection
-cluster = mongo_client(MONGOCONNECT)
+cluster = MongoClient(MONGOCONNECT)
 db = cluster['ErisDB']
 levels_collection = db['Levels']
 
