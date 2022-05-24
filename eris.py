@@ -1,4 +1,5 @@
 import os
+from smtplib import _Reply
 from dotenv import load_dotenv
 import pymongo
 from pymongo import MongoClient
@@ -30,6 +31,6 @@ async def on_message(ctx):
 
     # Thot Bot
     if 'thot' in ctx.content:
-        await ctx.send(file=discord.File('./assets/Thot.jpg'))
+        await ctx.reply(file=discord.File('./assets/Thot.jpg'))
 
 bot.run(TOKEN)
