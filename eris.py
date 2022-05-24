@@ -30,6 +30,6 @@ async def on_message(ctx):
 
     # Thot Bot
     if 'thot' in ctx.content:
-        ctx.reply('thot')
+        await ctx.reply('thot')
 
 bot.run(TOKEN)
