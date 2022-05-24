@@ -31,6 +31,6 @@ async def on_message(ctx):
 
     # Thot Bot
     if 'thot' in ctx.content:
-        await ctx.reply(file=discord.File('./assets/Thot.jpg'))
+        await discord.channel.send(file=discord.File('./assets/Thot.jpg'))
 
 bot.run(TOKEN)
