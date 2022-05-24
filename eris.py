@@ -29,10 +29,10 @@ async def on_message(ctx):
     guild_id = ctx.guild.id
 
     if author_id != '924400948707745802':
-        
+
         # Thot Bot v2
         if 'thot' in ctx.content:
-            await ctx.reply('Thot')
+            await ctx.reply(file=discord.file('.\\assets\\Thot.jpg'))
         
         
 
