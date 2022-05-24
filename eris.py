@@ -29,7 +29,7 @@ async def on_message(ctx):
     guild_id = ctx.guild.id
 
     # Thot Bot
-    if ctx.message('thot'):
+    if 'thot' in ctx.content:
         print('oh no')
 
 bot.run(TOKEN)
