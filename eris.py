@@ -19,21 +19,23 @@ levels_collection = db['Levels']
 # Bot Startup
 bot = discord.Client()
 
+# Startup Console Message
 @bot.event 
 async def on_ready():
-    print('Eris is online!') # Startup Console Message
+    print('Eris is online!') 
 
+# Registers and Processes Messages Sent
 @bot.event
 async def on_message(ctx):
     author_id = ctx.author.id
     guild_id = ctx.guild.id
 
-    if author_id != '924400948707745802':
+    if author_id != '924400948707745802': # If the message author is Eris, it wont reply
 
         # Thot Bot v2
         if 'thot' in ctx.content:
             await ctx.reply('https://i.imgur.com/RoJ9IYz.jpg')
         
-        
+
 
 bot.run(TOKEN)
