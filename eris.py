@@ -30,7 +30,8 @@ async def on_message(ctx):
     author_id = ctx.author.id
     guild_id = ctx.guild.id
 
-    if author_id != '924400948707745802': # If the message author is Eris, it wont reply
+    # If the message author is Eris, it wont reply
+    if author_id != '924400948707745802': 
 
         # Thot Bot v2
         if 'thot' in ctx.content.lower():
