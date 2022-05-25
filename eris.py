@@ -33,7 +33,7 @@ async def on_message(ctx):
     if author_id != '924400948707745802': # If the message author is Eris, it wont reply
 
         # Thot Bot v2
-        if 'thot' in ctx.content.lower:
+        if 'thot' in ctx.content.lower():
             await ctx.reply('https://i.imgur.com/RoJ9IYz.jpg')
         
 
