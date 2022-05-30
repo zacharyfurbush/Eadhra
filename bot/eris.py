@@ -36,8 +36,6 @@ async def on_message(ctx):
     author_id = ctx.author.id
     guild_id = ctx.guild.id
 
-@bot.slash_command
-        
 
 
 bot.run(TOKEN)
