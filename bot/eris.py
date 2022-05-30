@@ -3,7 +3,6 @@ from dotenv import load_dotenv
 import pymongo
 from pymongo import MongoClient
 import discord
-from discord import app_commands # refer https://github.com/Digiwind/Digiwind-Videos/blob/main/DPY%20Slash%20Commands.py
 
 # Private Stuff Retrieval
 load_dotenv()
@@ -16,51 +15,29 @@ cluster = MongoClient(MONGOCONNECT)
 db = cluster['ErisDB']
 levels_collection = db['Levels']
 
+# Bot Startup
+bot = discord.Client()
 
-class aclient(discord.Client):
-    def __init__(self):
-        super().__init__(intents = discord.Intents.all())
-        self.synced = False
+# Startup Console Message
+@bot.event 
+async def on_ready():
+    print('Eris is online!') 
 
-    async def on_ready(self):
-        await self.wait_until_ready()
-        if not self.synced:
-            await tree.sync(guild = discord.Object(id=TESTGUILD))
-            self.synced = True
-        print('Eris is online!') 
+# Registers and Processes Messages Sent
+@bot.event
+async def on_message(ctx):
+    if ctx.author.bot: # Author Bot Check
+        return
 
-client = aclient()
-tree = app_commands.CommandTree(client)
+    # Thot Bot: Revival
+    if 'thot' in ctx.content.lower():
+        await ctx.reply('https://i.imgur.com/RoJ9IYz.jpg')
 
-@tree.command(name = 'Ping', description = 'Pings Eris', id = TESTGUILD)
-async def slash(interaction: discord.Interaction):
-    await interaction.response.send_message('Pong! 🏓', ephemeral = True)
+    author_id = ctx.author.id
+    guild_id = ctx.guild.id
 
-client.run(TOKEN)
-
-# # Bot Startup
-# bot = discord.Client()
-
-# # Startup Console Message
-# @bot.event 
-# async def on_ready():
-#     print('Eris is online!') 
-
-# # Registers and Processes Messages Sent
-# @bot.event
-# async def on_message(ctx):
-#     if ctx.author.bot: # Author Bot Check
-#         return
-
-#     # Thot Bot: Revival
-#     if 'thot' in ctx.content.lower():
-#         await ctx.reply('https://i.imgur.com/RoJ9IYz.jpg')
-
-#     author_id = ctx.author.id
-#     guild_id = ctx.guild.id
-
-# @bot.slash_command
+@bot.slash_command
         
 
 
-# bot.run(TOKEN)
+bot.run(TOKEN)
