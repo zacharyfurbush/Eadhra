@@ -46,7 +46,7 @@ async def on_message(ctx):
         return
 
     # Bueno Bot: Origins
-    if 'bueno' in ctx.content.lower(): #or 'good' or 'nice' or 'cool' or 'excellent' or 'great'
+    if 'bueno' in ctx.content.lower() or 'good' in ctx.content.lower(): #or 'good' or 'nice' or 'cool' or 'excellent' or 'great'
         await ctx.reply('https://i.imgur.com/a4pQcxn.jpg')
         return
 
