@@ -32,7 +32,7 @@ bot = discord.Client()
 # Startup Console Message
 @bot.event 
 async def on_ready():
-    print('Eris is online!') 
+    print('Eadhra is online!') 
 
 # Registers and Processes Messages Sent
 @bot.event
@@ -43,6 +43,10 @@ async def on_message(ctx):
     # Thot Bot: Revival
     if 'thot' in ctx.content.lower():
         await ctx.reply('https://i.imgur.com/RoJ9IYz.jpg')
+
+    # Bueno Bot: Origins
+    if 'bueno' or 'good' or 'nice' in ctx.content.lower():
+        await ctx.reply('https://imgur.com/a/FuuYEUV.png')
 
     author_id = ctx.author.id
     guild_id = ctx.guild.id
