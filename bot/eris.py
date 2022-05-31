@@ -52,7 +52,7 @@ async def on_message(ctx):
 
     # Virgin Bot: Vengence
     if 'no maidens' or 'virgin' or 'no bitches' or 'no hoes' in ctx.content.lower():
-        await ctx.repl('https://i.imgur.com/bTfmaZA.jpg')
+        await ctx.reply('https://i.imgur.com/bTfmaZA.jpg')
         return
 
     author_id = ctx.author.id
