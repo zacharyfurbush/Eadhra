@@ -1,19 +1,22 @@
 import os
 from dotenv import load_dotenv
-import pymongo
-from pymongo import MongoClient
+import mysql.connector
 import discord
 
 # Private Stuff Retrieval
 load_dotenv()
-TOKEN = os.getenv('TOKEN')
+BOTTOKEN = os.getenv('BOTTOKEN')
 TESTGUILD = os.getenv('TESTGUILD')
-MONGOCONNECT = os.getenv('MONGOCONNECT')
+DBHOST = os.getenv('DBHOST')
+DBUSER = os.getenv('DBUSER')
+DBPASS = os.getenv('DBPASS')
 
-# MongoDB Connection
-cluster = MongoClient(MONGOCONNECT)
-db = cluster['ErisDB']
-levels_collection = db['Levels']
+# ErisDB Connection
+db = mysql.connector.connect(
+    host = DBHOST,
+    user = DBUSER,
+    passwd = DBPASS
+    )
 
 # Bot Startup
 bot = discord.Client()
@@ -38,4 +41,4 @@ async def on_message(ctx):
 
 
 
-bot.run(TOKEN)
+bot.run(BOTTOKEN)
