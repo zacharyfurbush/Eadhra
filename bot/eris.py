@@ -7,11 +7,11 @@ import discord
 load_dotenv()
 BOTTOKEN = os.getenv('BOTTOKEN')
 TESTGUILD = os.getenv('TESTGUILD')
-DBHOST = os.getenv('DBHOST')
-DBUSER = os.getenv('DBUSER')
-DBPASS = os.getenv('DBPASS')
-DBPORT = os.getenv('DBPORT')
-DBNAME = os.getenv('DBNAME')
+# DBHOST = os.getenv('DBHOST')
+# DBUSER = os.getenv('DBUSER')
+# DBPASS = os.getenv('DBPASS')
+# DBPORT = os.getenv('DBPORT')
+# DBNAME = os.getenv('DBNAME')
 
 # ErisDB Connection
 # db = mysql.connector.connect(
