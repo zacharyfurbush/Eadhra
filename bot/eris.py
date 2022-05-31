@@ -18,8 +18,8 @@ db = mysql.connector.connect(
     host = DBHOST, 
     user = DBUSER,
     password = DBPASS,
-    #port = DBPORT,
-    #database = DBNAME
+    port = DBPORT,
+    database = DBNAME
     )
 
 # Bot Startup
