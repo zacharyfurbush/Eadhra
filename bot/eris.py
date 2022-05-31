@@ -43,10 +43,12 @@ async def on_message(ctx):
     # Thot Bot: Revival
     if 'thot' in ctx.content.lower():
         await ctx.reply('https://i.imgur.com/RoJ9IYz.jpg')
+        return
 
     # Bueno Bot: Origins
     if 'bueno' or 'good' or 'nice' in ctx.content.lower():
-        await ctx.reply('https://imgur.com/a/FuuYEUV.png')
+        await ctx.reply('https://i.imgur.com/a4pQcxn.jpg')
+        return
 
     author_id = ctx.author.id
     guild_id = ctx.guild.id
