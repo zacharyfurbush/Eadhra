@@ -1,7 +1,11 @@
 import os
+import requests
 from dotenv import load_dotenv
 import mysql.connector
 import discord
+
+# SSL Certificate Request
+requests.get('https://discord.com', verify=True)
 
 # Private Stuff Retrieval
 load_dotenv()
