@@ -46,12 +46,20 @@ async def on_message(ctx):
         return
 
     # Bueno Bot: Origins
-    if 'bueno' in ctx.content.lower() or 'good' in ctx.content.lower(): #or 'good' or 'nice' or 'cool' or 'excellent' or 'great'
+    if ('bueno' in ctx.content.lower() or 
+        'good' in ctx.content.lower() or
+        'nice' in ctx.content.lower() or
+        'cool' in ctx.content.lower() or
+        'excellent' in ctx.content.lower() or
+        'great' in ctx.content.lower()):
         await ctx.reply('https://i.imgur.com/a4pQcxn.jpg')
         return
 
     # Virgin Bot: Vengence
-    if 'no maidens' in ctx.content.lower(): #or 'virgin' or 'no bitches' or 'no hoes'
+    if ('no maidens' in ctx.content.lower() or 
+        'virgin' in ctx.content.lower() or
+        'no bitches' in ctx.content.lower() or
+        'no hoes' in ctx.content.lower()):
         await ctx.reply('https://i.imgur.com/bTfmaZA.jpg')
         return
 
