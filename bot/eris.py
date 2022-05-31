@@ -10,12 +10,16 @@ TESTGUILD = os.getenv('TESTGUILD')
 DBHOST = os.getenv('DBHOST')
 DBUSER = os.getenv('DBUSER')
 DBPASS = os.getenv('DBPASS')
+DBPORT = os.getenv('DBPORT')
+DBNAME = os.getenv('DBNAME')
 
 # ErisDB Connection
 db = mysql.connector.connect(
-    host = DBHOST,
+    host = DBHOST, 
     user = DBUSER,
-    passwd = DBPASS
+    password = DBPASS,
+    port = DBPORT,
+    database = DBNAME
     )
 
 # Bot Startup
