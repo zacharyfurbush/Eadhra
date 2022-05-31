@@ -14,13 +14,13 @@ DBPORT = os.getenv('DBPORT')
 DBNAME = os.getenv('DBNAME')
 
 # ErisDB Connection
-db = mysql.connector.connect(
-    host = DBHOST, 
-    user = DBUSER,
-    password = DBPASS,
-    port = DBPORT,
-    database = DBNAME
-    )
+# db = mysql.connector.connect(
+#     host = DBHOST, 
+#     user = DBUSER,
+#     password = DBPASS,
+#     port = DBPORT,
+#     database = DBNAME
+#     )
 
 # Bot Startup
 bot = discord.Client()
