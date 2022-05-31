@@ -1,2 +1,6 @@
 /bot/.env
+/dash/.env
+/site/.env
+/dash/node_modules/
+/site/node_modules/
 icon.png
