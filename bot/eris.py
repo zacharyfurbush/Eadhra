@@ -52,6 +52,7 @@ async def on_message(ctx):
         'cool' in ctx.content.lower() or
         'excellent' in ctx.content.lower() or
         'great' in ctx.content.lower()):
+
         await ctx.reply('https://i.imgur.com/a4pQcxn.jpg')
         return
 
@@ -60,6 +61,7 @@ async def on_message(ctx):
         'virgin' in ctx.content.lower() or
         'no bitches' in ctx.content.lower() or
         'no hoes' in ctx.content.lower()):
+        
         await ctx.reply('https://i.imgur.com/bTfmaZA.jpg')
         return
 
