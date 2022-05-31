@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import mysql.connector
 import discord
 
-# SSL Certificate Request
+# SSL Certificate Verification Fix
 requests.get('https://discord.com', verify=True)
 
 # Private Stuff Retrieval
